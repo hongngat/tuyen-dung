@@ -232,7 +232,7 @@ header {
         width: 130px !important;
     }
     .menu-content {
-        top: 53px;
+        top: 53px !important;
         position: fixed!important;
     }
     .menu ul li :hover>a {
