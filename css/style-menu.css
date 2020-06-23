@@ -232,8 +232,8 @@ header {
         width: 130px !important;
     }
     .menu-content {
-        top: 94px;
-        position: absolute !important;
+        top: 53px;
+        position: fixed!important;
     }
     .menu ul li :hover>a {
         font-weight: bold;
@@ -242,6 +242,9 @@ header {
         font-weight: bold;
     }
     .menu ul .menu-search {
+        display: none;
+    }
+    .topbar {
         display: none;
     }
 }
@@ -628,4 +631,10 @@ input::-webkit-input-placeholder {
 
 #form-search input::-webkit-input-placeholder {
     color: transparent;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }

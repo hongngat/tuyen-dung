@@ -148,3 +148,28 @@ jQuery(document).ready(function($) {
         }
     }
 });
+window.onscroll = function() {
+    myFunction()
+    mobileFunction()
+};
+
+var navbar = document.getElementById("main-navbar");
+var mobilenav = document.getElementById("icon-mobile");
+var sticky = navbar.offsetTop;
+var sticky1 = mobilenav.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
+function mobileFunction() {
+    if (window.pageYOffset >= sticky1) {
+        mobilenav.classList.add("sticky")
+    } else {
+        mobilenav.classList.remove("sticky");
+    }
+}
