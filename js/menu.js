@@ -148,28 +148,14 @@ jQuery(document).ready(function($) {
         }
     }
 });
-window.onscroll = function() {
-    myFunction()
-    mobileFunction()
-};
+var num = 150; //number of pixels before modifying styles
 
-var navbar = document.getElementById("main-navbar");
-var mobilenav = document.getElementById("icon-mobile");
-var sticky = navbar.offsetTop;
-var sticky1 = mobilenav.offsetTop;
-
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+$(window).bind('scroll', function() {
+    if ($(window).scrollTop() > num) {
+        $('#icon-mobile').addClass('sticky');
+        $('#main-navbar').addClass('sticky');
     } else {
-        navbar.classList.remove("sticky");
+        $('#icon-mobile').removeClass('sticky');
+        $('#main-navbar').removeClass('sticky');
     }
-}
-
-function mobileFunction() {
-    if (window.pageYOffset >= sticky1) {
-        mobilenav.classList.add("sticky")
-    } else {
-        mobilenav.classList.remove("sticky");
-    }
-}
+});
